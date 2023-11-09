@@ -1,0 +1,10 @@
+@import "../../app.css";
+
+.cat-description {
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid #E16120;
+}
+
+.cat-description p {
+    margin-top: 12px;
+}

@@ -1,0 +1,59 @@
+@import "../../App.css";
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-white);
+  z-index: 1000;
+  padding: 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateX(100%);
+  transition: $transition;
+}
+
+/* Styles for the .sidebar-visible class */
+.sidebar-visible {
+  transform: translateX(0);
+}
+
+/* Styles for the .navbar-hide-btn class */
+.sidebar .navbar-hide-btn {
+  position: absolute;
+  right: 14px;
+  color: $clr-orange; /* Replace with the actual color value */
+  transition: $transition; /* Replace with the actual transition value */
+}
+
+/* Hover styles for the .navbar-hide-btn class */
+.sidebar .navbar-hide-btn:hover {
+  color: $clr-dark; /* Replace with the actual color value */
+}
+
+/* Styles for the .side-content class */
+.sidebar .side-content {
+  /* Styles for the .side-nav class within .side-content */
+  .side-nav {
+    margin-top: 4rem;
+    
+    /* Styles for the .side-item class within .side-nav */
+    .side-item {
+      padding: 6px 0;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+      
+      /* Styles for the .side-link class within .side-item */
+      .side-link {
+        opacity: 0.9;
+        transition: $transition; /* Replace with the actual transition value */
+      }
+    }
+  }
+}
+
+/* Media query for screens with a minimum width of 576px */
+@media screen and (min-width: 576px) {
+  .sidebar {
+    width: 280px;
+  }
+}
